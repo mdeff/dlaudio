@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Standard Sparse Coding
 %
-% min_Z,D 1/2*|| X - DZ ||_2^2 + lambda*|| Z ||_1
+% min_Z,D 1/2*|| X - DZ ||_2^2 + lambda*|| Z ||_1
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,7 +17,7 @@ function test_standard_sparse_coding
 % Load image
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-[Im0,map] = imread('barbara128.tif'); fs = 3;
+[Im0,map] = imread('data/xavier_barbara128.tif'); fs = 3;
 Im0 = double(Im0);
 Im0 = double(Im0); Im0 = Im0/ max(Im0(:)); % normalize image
 [Ny,Nx] = size(Im0);
@@ -66,7 +66,7 @@ if 2==1
     sizeX = size(X)
     
     % Save
-    save('X.mat','X','p');
+    save('data/xavier_X.mat','X','p');
     
     % Display
     if 2==1
@@ -102,7 +102,7 @@ if 2==1
     
 end
 
-load('X.mat','X','p');
+load('data/xavier_X.mat','X','p');
 
 
 
@@ -131,7 +131,7 @@ if 2==1
     Dinit = D;
     
     % Save
-    save('initZD.mat','Zinit','Dinit');
+    save('data/xavier_initZD.mat','Zinit','Dinit');
     
     % Display
     if 1==1
@@ -147,7 +147,7 @@ if 2==1
     
 end
 
-load('initZD.mat','Zinit','Dinit');
+load('data/xavier_initZD.mat','Zinit','Dinit');
 
 
 
@@ -352,9 +352,8 @@ for niter=1:15
     
 end
 
-
-
-
+exectime = current_time;
+save('data/xavier_ZD.mat','Z','D','exectime')
 
 end
 
