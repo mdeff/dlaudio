@@ -5,3 +5,4 @@ mkvirtualenv --system-site-packages --python=python2.7 dlaudio
 pip install --upgrade pyunlocbox
 pip install --upgrade ipython pyzmq tornado jsonschema mistune
 pip install --upgrade librosa scikits.samplerate
+pip install --upgrade h5py
