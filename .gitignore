@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+data
+profile_dlaudio/*
+!profile_dlaudio/ipython_notebook_config.py
+*~
