@@ -3,4 +3,7 @@ data/
 profile_dlaudio/*
 !profile_dlaudio/ipython_notebook_config.py
 *~
-pyunlocbox/
+pyunlocbox
+pyu_repo
+*.txt
+*.html

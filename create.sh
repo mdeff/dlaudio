@@ -1,8 +1,28 @@
 #!/usr/bin/env bash
-source /etc/bash_completion.d/virtualenvwrapper
 rm -rf ~/.virtualenvs/dlaudio
-mkvirtualenv --system-site-packages --python=python2.7 dlaudio
-pip install --upgrade pyunlocbox
-pip install --upgrade ipython pyzmq tornado jsonschema mistune
-pip install --upgrade librosa scikits.samplerate
-pip install --upgrade h5py
+rm -rf pyu_repo pyunlocbox
+
+source /etc/bash_completion.d/virtualenvwrapper
+mkvirtualenv --system-site-packages --python=/usr/bin/python2.7 dlaudio
+#mkvirtualenv --system-site-packages --python=/usr/bin/python3 dlaudio
+
+# Audio processing.
+pip install scikits.samplerate
+pip install librosa
+#git clone https://github.com/bmcfee/librosa.git  # If using Python 3.
+
+# Latest notebook format.
+pip install --upgrade ipython
+pip install pyzmq tornado jsonschema mistune  # If not available.
+
+# HDF5.
+pip install h5py
+
+# PyUNLocBoX.
+#pip install --upgrade pyunlocbox
+git clone https://github.com/epfl-lts2/pyunlocbox.git pyu_repo
+ln -s pyu_repo/pyunlocbox pyunlocbox
+
+#mkdir data; cd data
+#wget http://opihi.cs.uvic.ca/sound/genres.tar.gz
+#tar -zxvf genres.tar.gz
