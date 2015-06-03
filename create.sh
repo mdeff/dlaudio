@@ -23,6 +23,11 @@ pip install h5py
 git clone https://github.com/epfl-lts2/pyunlocbox.git pyu_repo
 ln -s pyu_repo/pyunlocbox pyunlocbox
 
+# Profiling.
+pip install line_profiler
+pip install memory_profiler
+pip install objgraph
+
 #mkdir data; cd data
 #wget http://opihi.cs.uvic.ca/sound/genres.tar.gz
 #tar -zxvf genres.tar.gz
