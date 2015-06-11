@@ -7,3 +7,4 @@ pyunlocbox
 pyu_repo
 *.txt
 *.html
+*.nbconvert.ipynb
