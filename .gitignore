@@ -6,5 +6,6 @@ profile_dlaudio/*
 pyunlocbox
 pyu_repo
 *.txt
+!LICENSE.txt
 *.html
 *.nbconvert.ipynb
